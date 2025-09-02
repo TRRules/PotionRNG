@@ -1,56 +1,332 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cookie business</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+    <h1>THE ABILITY AND COLOR BUTTONS, DO NOT YET WORK. THIS IS AN ALPHA</h1>
+    <h3>
+        Minor bugs- I mean features: <br>
+        Delayed appearence of wizard number <br>
+        Possible texts missing or unmade <br>
+    </h3>
+    <h3>
+        <b>Currently updating (in this order):</b> <br>
+        Better decimals <br>
+        Building cost amplifies <br>
+        Balancing <br>
+        Prestige system <br>
+        Smaller numbers <br>
+        Faster code <br>
+    </h3>
+    <span id="change">0</span>
+    <!-- Make images for these doing <button><img> </img></button> Also make names for wizard-->
+    <div>
+        <button onclick="addPotions()">PotionClickThing</button>
+    </div>
 
-<!-- Add your site or application content here -->
-<div class="row settings">
-  <p>Timer <span id="timer">0</span></p>
-  <p>Cookies <span id="cookies">0</span></p>
-  <p>Bank $<span id="bank">0</span></p>
-  <p>Coefficient <span id="coefficient">1</span></p>
-</div>
+    <div>
+        <div>
+            <h4>This is Wizzo. Is he even a wizard, that name seems made up. Number of wizards:<span
+                    id="change1">0</span></h4>
+            <button onclick="buyWizard1()" id="wizard1">Buy Wizard: <span id="cost1"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone1()">Red</button>
+            <button onclick="blueWizardStone1()">Blue</button>
+            <button onclick="pinkWizardStone1()">Pink</button>
+            <button onclick="greenWizardStone1()">Green</button>
+            <button onclick="yellowWizardStone1()">Yellow</button>
+            <button onclick="orangeWizardStone1()">Orange</button>
+            <button onclick="purpleWizardStone1()">Purple</button>
+            <button onclick="soulaWizardStone1()">Ability</button>
+            <button onclick="soulbWizardStone1()">Ability</button>
+            <button onclick="soulcWizardStone1()">Ability</button>
+        </div>
+    </div>
 
-<div class="row">
-  <div id="cookiesChoice" class="col">
-    <button data-amount="1" type="button">Buy 1 cookie</button>
-    <button data-amount="2" type="button">Buy 2 cookies</button>
-    <button data-amount="5" type="button">Buy 5 cookies</button>
-    <button data-amount="10" type="button">Buy 10 cookies</button>
-  </div>
+    <div>
+        <div>
+            <h4>This is Barry. A failed skyblock alchemist, he deicided to join us instead of being the mayor. Number of
+                wizards:<span id="change2">0</span></h4>
+            <button onclick="buyWizard2()" id="wizard2">Buy Wizard: <span id="cost2"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone2()">Red</button>
+            <button onclick="blueWizardStone2()">Blue</button>
+            <button onclick="pinkWizardStone2()">Pink</button>
+            <button onclick="greenWizardStone2()">Green</button>
+            <button onclick="yellowWizardStone2()">Yellow</button>
+            <button onclick="orangeWizardStone2()">Orange</button>
+            <button onclick="purpleWizardStone2()">Purple</button>
+            <button onclick="soulaWizardStone2()">Ability</button>
+            <button onclick="soulbWizardStone2()">Ability</button>
+            <button onclick="soulcWizardStone2()">Ability</button>
+        </div>
+    </div>
 
-  <div id="technologiesChoice" class="col">
-    <button type="button">Buy Nebulian Factory - $100</button>
-    <button type="button">Buy MegaTrax Factory - $200</button>
-    <button type="button">Buy Slender Factory - $300</button>
-    <button type="button">Buy Moo Factory - $400</button>
-  </div>
+    <div>
+        <div>
+            <h4>This is Wizard3. [Flavour Text] Number of wizards:<span id="change3">0</span></h4>
+            <button onclick="buyWizard3()" id="wizard3">Buy Wizard: <span id="cost3"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone3()">Red</button>
+            <button onclick="blueWizardStone3()">Blue</button>
+            <button onclick="pinkWizardStone3()">Pink</button>
+            <button onclick="greenWizardStone3()">Green</button>
+            <button onclick="yellowWizardStone3()">Yellow</button>
+            <button onclick="orangeWizardStone3()">Orange</button>
+            <button onclick="purpleWizardStone3()">Purple</button>
+            <button onclick="soulaWizardStone3()">Ability</button>
+            <button onclick="soulbWizardStone3()">Ability</button>
+            <button onclick="soulcWizardStone3()">Ability</button>
+        </div>
+    </div>
 
-</div>
+    <div>
+        <div>
+            <h4>This is Wizard4. [Flavour Text] Number of wizards:<span id="change4">0</span></h4>
+            <button onclick="buyWizard4()" id="wizard4">Buy Wizard: <span id="cost4"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone4()">Red</button>
+            <button onclick="blueWizardStone4()">Blue</button>
+            <button onclick="pinkWizardStone4()">Pink</button>
+            <button onclick="greenWizardStone4()">Green</button>
+            <button onclick="yellowWizardStone4()">Yellow</button>
+            <button onclick="orangeWizardStone4()">Orange</button>
+            <button onclick="purpleWizardStone4()">Purple</button>
+            <button onclick="soulaWizardStone4()">Ability</button>
+            <button onclick="soulbWizardStone4()">Ability</button>
+            <button onclick="soulcWizardStone4()">Ability</button>
+        </div>
+    </div>
 
-<script src="js/app.js"></script>
+    <div>
+        <div>
+            <h4>This is Wizard5. [Flavour Text] Number of wizards:<span id="change5">0</span></h4>
+            <button onclick="buyWizard5()" id="wizard5">Buy Wizard: <span id="cost5"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone5()">Red</button>
+            <button onclick="blueWizardStone5()">Blue</button>
+            <button onclick="pinkWizardStone5()">Pink</button>
+            <button onclick="greenWizardStone5()">Green</button>
+            <button onclick="yellowWizardStone5()">Yellow</button>
+            <button onclick="orangeWizardStone5()">Orange</button>
+            <button onclick="purpleWizardStone5()">Purple</button>
+            <button onclick="soulaWizardStone5()">Ability</button>
+            <button onclick="soulbWizardStone5()">Ability</button>
+            <button onclick="soulcWizardStone5()">Ability</button>
+        </div>
+    </div>
 
+    <div>
+        <div>
+            <h4>This is Wizard6. [Flavour Text] Number of wizards:<span id="change6">0</span></h4>
+            <button onclick="buyWizard6()" id="wizard6">Buy Wizard: <span id="cost6"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone6()">Red</button>
+            <button onclick="blueWizardStone6()">Blue</button>
+            <button onclick="pinkWizardStone6()">Pink</button>
+            <button onclick="greenWizardStone6()">Green</button>
+            <button onclick="yellowWizardStone6()">Yellow</button>
+            <button onclick="orangeWizardStone6()">Orange</button>
+            <button onclick="purpleWizardStone6()">Purple</button>
+            <button onclick="soulaWizardStone6()">Ability</button>
+            <button onclick="soulbWizardStone6()">Ability</button>
+            <button onclick="soulcWizardStone6()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard7. [Flavour Text] Number of wizards:<span id="change7">0</span></h4>
+            <button onclick="buyWizard7()" id="wizard7">Buy Wizard: <span id="cost7"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone7()">Red</button>
+            <button onclick="blueWizardStone7()">Blue</button>
+            <button onclick="pinkWizardStone7()">Pink</button>
+            <button onclick="greenWizardStone7()">Green</button>
+            <button onclick="yellowWizardStone7()">Yellow</button>
+            <button onclick="orangeWizardStone7()">Orange</button>
+            <button onclick="purpleWizardStone7()">Purple</button>
+            <button onclick="soulaWizardStone7()">Ability</button>
+            <button onclick="soulbWizardStone7()">Ability</button>
+            <button onclick="soulcWizardStone7()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard8. [Flavour Text] Number of wizards:<span id="change8">0</span></h4>
+            <button onclick="buyWizard8()" id="wizard8">Buy Wizard: <span id="cost8"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone8()">Red</button>
+            <button onclick="blueWizardStone8()">Blue</button>
+            <button onclick="pinkWizardStone8()">Pink</button>
+            <button onclick="greenWizardStone8()">Green</button>
+            <button onclick="yellowWizardStone8()">Yellow</button>
+            <button onclick="orangeWizardStone8()">Orange</button>
+            <button onclick="purpleWizardStone8()">Purple</button>
+            <button onclick="soulaWizardStone8()">Ability</button>
+            <button onclick="soulbWizardStone8()">Ability</button>
+            <button onclick="soulcWizardStone8()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard9. [Flavour Text] Number of wizards:<span id="change9">0</span></h4>
+            <button onclick="buyWizard9()" id="wizard9">Buy Wizard: <span id="cost9"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone9()">Red</button>
+            <button onclick="blueWizardStone9()">Blue</button>
+            <button onclick="pinkWizardStone9()">Pink</button>
+            <button onclick="greenWizardStone9()">Green</button>
+            <button onclick="yellowWizardStone9()">Yellow</button>
+            <button onclick="orangeWizardStone9()">Orange</button>
+            <button onclick="purpleWizardStone9()">Purple</button>
+            <button onclick="soulaWizardStone9()">Ability</button>
+            <button onclick="soulbWizardStone9()">Ability</button>
+            <button onclick="soulcWizardStone9()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard10. [Flavour Text] Number of wizards:<span id="change10">0</span></h4>
+            <button onclick="buyWizard10()" id="wizard10">Buy Wizard: <span id="cost10"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone10()">Red</button>
+            <button onclick="blueWizardStone10()">Blue</button>
+            <button onclick="pinkWizardStone10()">Pink</button>
+            <button onclick="greenWizardStone10()">Green</button>
+            <button onclick="yellowWizardStone10()">Yellow</button>
+            <button onclick="orangeWizardStone10()">Orange</button>
+            <button onclick="purpleWizardStone10()">Purple</button>
+            <button onclick="soulaWizardStone10()">Ability</button>
+            <button onclick="soulbWizardStone10()">Ability</button>
+            <button onclick="soulcWizardStone10()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard11. [Flavour Text] Number of wizards:<span id="change11">0</span></h4>
+            <button onclick="buyWizard11()" id="wizard11">Buy Wizard: <span id="cost11"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone11()">Red</button>
+            <button onclick="blueWizardStone11()">Blue</button>
+            <button onclick="pinkWizardStone11()">Pink</button>
+            <button onclick="greenWizardStone11()">Green</button>
+            <button onclick="yellowWizardStone11()">Yellow</button>
+            <button onclick="orangeWizardStone11()">Orange</button>
+            <button onclick="purpleWizardStone11()">Purple</button>
+            <button onclick="soulaWizardStone11()">Ability</button>
+            <button onclick="soulbWizardStone11()">Ability</button>
+            <button onclick="soulcWizardStone11()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard12. [Flavour Text] Number of wizards:<span id="change12">0</span></h4>
+            <button onclick="buyWizard12()" id="wizard12">Buy Wizard: <span id="cost12"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone12()">Red</button>
+            <button onclick="blueWizardStone12()">Blue</button>
+            <button onclick="pinkWizardStone12()">Pink</button>
+            <button onclick="greenWizardStone12()">Green</button>
+            <button onclick="yellowWizardStone12()">Yellow</button>
+            <button onclick="orangeWizardStone12()">Orange</button>
+            <button onclick="purpleWizardStone12()">Purple</button>
+            <button onclick="soulaWizardStone12()">Ability</button>
+            <button onclick="soulbWizardStone12()">Ability</button>
+            <button onclick="soulcWizardStone12()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard13. [Flavour Text] Number of wizards:<span id="change13">0</span></h4>
+            <button onclick="buyWizard13()" id="wizard13">Buy Wizard: <span id="cost13"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone13()">Red</button>
+            <button onclick="blueWizardStone13()">Blue</button>
+            <button onclick="pinkWizardStone13()">Pink</button>
+            <button onclick="greenWizardStone13()">Green</button>
+            <button onclick="yellowWizardStone13()">Yellow</button>
+            <button onclick="orangeWizardStone13()">Orange</button>
+            <button onclick="purpleWizardStone13()">Purple</button>
+            <button onclick="soulaWizardStone13()">Ability</button>
+            <button onclick="soulbWizardStone13()">Ability</button>
+            <button onclick="soulcWizardStone13()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard14. [Flavour Text] Number of wizards:<span id="change14">0</span></h4>
+            <button onclick="buyWizard14()" id="wizard14">Buy Wizard: <span id="cost14"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone14()">Red</button>
+            <button onclick="blueWizardStone14()">Blue</button>
+            <button onclick="pinkWizardStone14()">Pink</button>
+            <button onclick="greenWizardStone14()">Green</button>
+            <button onclick="yellowWizardStone14()">Yellow</button>
+            <button onclick="orangeWizardStone14()">Orange</button>
+            <button onclick="purpleWizardStone14()">Purple</button>
+            <button onclick="soulaWizardStone14()">Ability</button>
+            <button onclick="soulbWizardStone14()">Ability</button>
+            <button onclick="soulcWizardStone14()">Ability</button>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4>This is Wizard15. [Flavour Text] Number of wizards:<span id="change15">0</span></h4>
+            <button onclick="buyWizard15()" id="wizard15">Buy Wizard: <span id="cost15"></span></button>
+        </div>
+        <div>
+            <button onclick="redWizardStone15()">Red</button>
+            <button onclick="blueWizardStone15()">Blue</button>
+            <button onclick="pinkWizardStone15()">Pink</button>
+            <button onclick="greenWizardStone15()">Green</button>
+            <button onclick="yellowWizardStone15()">Yellow</button>
+            <button onclick="orangeWizardStone15()">Orange</button>
+            <button onclick="purpleWizardStone15()">Purple</button>
+            <button onclick="soulaWizardStone15()">Ability</button>
+            <button onclick="soulbWizardStone15()">Ability</button>
+            <button onclick="soulcWizardStone15()">Ability</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
