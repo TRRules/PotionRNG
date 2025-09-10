@@ -53,7 +53,7 @@ let values = {
     w13Pot: 0,
     w14Pot: 0,
     w15Pot: 0,
-    w1Base: 1,
+    w1Base: 0.1,
     w2Base: 1,
     w3Base: 8,
     w4Base: 47,
@@ -96,6 +96,7 @@ const booton15 = document.getElementById("wizard15")
 function createPotions() {
     values.potions += values.createdPotions.reduce((acc, cur) => acc + cur, 0);
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -106,7 +107,78 @@ function potionsInterval() {
 function addPotions() {
     values.potions = values.potions + 1;
     changeHTML();
+    roundPotions();
     updateGame();
+}
+
+function roundPotions() {
+    values.potions = values.potions * 10;
+    Math.round(values.potions);
+    values.potions = values.potions / 10;
+}
+
+function roundWiz1() {
+    Math.round(wizCost1)
+}
+
+function roundWiz2() {
+    Math.round(wizCost2)
+}
+
+function roundWiz3() {
+    Math.round(wizCost3)
+}
+
+function roundWiz4() {
+    Math.round(wizCost4)
+}
+
+function roundWiz5() {
+    Math.round(wizCost5)
+}
+
+function roundWiz6() {
+    Math.round(wizCost6)
+}
+
+function roundWiz7() {
+    Math.round(wizCost7)
+}
+
+function roundWiz8() {
+    Math.round(wizCost8)
+}
+
+function roundWiz8() {
+    Math.round(wizCost8)
+}
+
+function roundWiz9() {
+    Math.round(wizCost9)
+}
+
+function roundWiz10() {
+    Math.round(wizCost10)
+}
+
+function roundWiz11() {
+    Math.round(wizCost11)
+}
+
+function roundWiz12() {
+    Math.round(wizCost12)
+}
+
+function roundWiz13() {
+    Math.round(wizCost13)
+}
+
+function roundWiz14() {
+    Math.round(wizCost14)
+}
+
+function roundWiz15() {
+    Math.round(wizCost15)
 }
 
 function changeHTML() {
@@ -198,7 +270,9 @@ function buyWizard1() {
     values.w1Pot = values.w1Base * values.wizard1;
     values.potions = values.potions - values.wizCost1;
     values.wizCost1 = values.wizCost1;
+    roundWiz1();
     changeHTML();
+    roundPotions();
     updateGame();
 }
 
@@ -207,7 +281,9 @@ function buyWizard2() {
     values.w2Pot = values.w2Base * values.wizard2;
     values.potions = values.potions - values.wizCost2;
     values.wizCost2 = values.wizCost2;
+    roundWiz2();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -216,7 +292,9 @@ function buyWizard3() {
     values.w3Pot = values.w3Base * values.wizard3;
     values.potions = values.potions - values.wizCost3;
     values.wizCost3 = values.wizCost3;
+    roundWiz3();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -225,7 +303,9 @@ function buyWizard4() {
     values.w4Pot = values.w4Base * values.wizard4;
     values.potions = values.potions - values.wizCost4;
     values.wizCost4 = values.wizCost4;
+    roundWiz4();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -234,6 +314,7 @@ function buyWizard5() {
     values.w5Pot = values.w5Base * values.wizard5;
     values.potions = values.potions - values.wizCost5;
     values.wizCost5 = values.wizCost5;
+    roundWiz5();
     updateGame();
     changeHTML();
 }
@@ -243,7 +324,9 @@ function buyWizard6() {
     values.w6Pot = values.w6Base * values.wizard6;
     values.potions = values.potions - values.wizCost6;
     values.wizCost6 = values.wizCost6;
+    roundWiz6();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -252,7 +335,9 @@ function buyWizard7() {
     values.w7Pot = values.w7Base * values.wizard7;
     values.potions = values.potions - values.wizCost7;
     values.wizCost7 = values.wizCost7;
+    roundWiz7();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -260,7 +345,8 @@ function buyWizard8() {
     values.wizard8 = values.wizard8 + 1;
     values.w8Pot = values.w8Base * values.wizard8;
     values.potions = values.potions - values.wizCost8;
-    values.wizCost8 = values.wizCost8;
+    values.wizCost8 = values.wizCost8 * 1.15;
+    roundWiz8();
     updateGame();
     changeHTML();
 }
@@ -270,7 +356,9 @@ function buyWizard9() {
     values.w9Pot = values.w9Base * values.wizard9;
     values.potions = values.potions - values.wizCost9;
     values.wizCost9 = values.wizCost9;
+    roundWiz9();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -279,7 +367,9 @@ function buyWizard10() {
     values.w10Pot = values.w10Base * values.wizard10;
     values.potions = values.potions - values.wizCost10;
     values.wizCost10 = values.wizCost10;
+    roundWiz10();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -288,7 +378,9 @@ function buyWizard11() {
     values.w11Pot = values.w11Base * values.wizard11;
     values.potions = values.potions - values.wizCost11;
     values.wizCost11 = values.wizCost11;
+    roundWiz11();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -297,7 +389,9 @@ function buyWizard12() {
     values.w12Pot = values.w12Base * values.wizard12;
     values.potions = values.potions - values.wizCost12;
     values.wizCost12 = values.wizCost12;
+    roundWiz12();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -306,7 +400,9 @@ function buyWizard13() {
     values.w13Pot = values.w13Base * values.wizard13;
     values.potions = values.potions - values.wizCost13;
     values.wizCost13 = values.wizCost13;
+    roundWiz13();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -315,7 +411,9 @@ function buyWizard14() {
     values.w14Pot = values.w14Base * values.wizard14;
     values.potions = values.potions - values.wizCost14;
     values.wizCost14 = values.wizCost14;
+    roundWiz14();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
@@ -324,7 +422,9 @@ function buyWizard15() {
     values.w15Pot = values.w15Base * values.wizard15;
     values.potions = values.potions - values.wizCost15;
     values.wizCost15 = values.wizCost15;
+    roundWiz15();
     updateGame();
+    roundPotions();
     changeHTML();
 }
 
